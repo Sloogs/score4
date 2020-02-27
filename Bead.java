@@ -1,7 +1,7 @@
 public class Bead
 {
-	private static numWhite;
-	private static numBlack;
+	private static int numWhite;
+	private static int numBlack;
 	private boolean colour;
 	private int beadId;
 	private int xCoord;
@@ -10,15 +10,16 @@ public class Bead
 
 	public Bead(boolean colour, int x, int y, int z)
 	{
-		if (c == 0)
+		System.out.println("Creating bead.");
+		if (colour == false)
 		{
-			colour = 0;
+			colour = false;
 			beadId = numWhite + 1;
 			numWhite++;
 		}
 		else
 		{
-			colour = 1;
+			colour = true;
 			beadId = numBlack + 1;
 			numBlack++;
 		}
@@ -35,6 +36,6 @@ public class Bead
 
 	public int getId()
 	{
-		return.this beadId;
+		return this.beadId;
 	}
 }
