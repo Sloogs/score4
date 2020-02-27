@@ -4,16 +4,17 @@ public class Peg
 {
 	private int[] coordinates = new Integer[2];
 	private int numBeads = 0;
-	private ArrayList<Bead> = new ArrayList<Bead>;
+	private ArrayList<Bead> beads = new ArrayList<Bead>;
 
-	public Peg(int x, int y)
+	public void addBead(boolean colour, int x, int y)
 	{
-		coordinates[0] = x;
-		coordaintes[1] = y;
+		beads.add(new Bead(colour, x, y));
+		numBeads++;
 	}
 
-	public void placeBead(boolean colour, int x, int y)
+	public void removeBead(Bead bead)
 	{
-		bead[numBeads] = 
+		beads.remove(bead);
+		numBeads--;
 	}
 }
