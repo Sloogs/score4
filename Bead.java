@@ -2,34 +2,35 @@ public class Bead
 {
 	private static int numWhite;
 	private static int numBlack;
-	private boolean colour;
+	private Colour colour;
 	private int beadId;
 	private int xCoord;
 	private int yCoord;
 	private int zCoord;
 
-	public Bead(boolean colour, int x, int y, int z)
+	public Bead(Colour colour, int x, int y, int z)
 	{
 		Debug.log("Creating bead at: (x: " + x + ", y: " + y +", z: " + z + ")");
-		Debug.log("Number of white beads: " + numWhite);
-		Debug.log("Number of black beads: " + numBlack);
-		Debug.log("Colour: " + colour);
-		Debug.log("Bead Id: " + beadId);
-		if (colour == false)
+		if (colour == Colour.WHITE)
 		{
-			colour = false;
+			colour = Colour.WHITE;
 			beadId = numWhite + 1;
 			numWhite++;
 		}
 		else
 		{
-			colour = true;
+			colour = Colour.BLACK;
 			beadId = numBlack + 1;
 			numBlack++;
 		}
+
+		Debug.log("Number of white beads: " + numWhite);
+		Debug.log("Number of black beads: " + numBlack);
+		Debug.log("Colour: " + colour);
+		Debug.log("Bead Id: " + beadId);
 	}
 
-	public boolean getColour()
+	public Colour getColour()
 	{
 		return this.colour;
 	}

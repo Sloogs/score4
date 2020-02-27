@@ -14,7 +14,7 @@ public class Peg
 		yCoord = y;
 	}
 
-	public void addBead(boolean colour)
+	public void addBead(Colour colour)
 	{
 		Bead bead = new Bead(colour, xCoord, yCoord, numBeads);
 		beads.add(bead);
