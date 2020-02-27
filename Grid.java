@@ -6,7 +6,7 @@ public class Grid
 
 	public Grid()
 	{
-		System.out.println("Creating grid.");
+		Debug.log("Creating grid.");
 		for (int x = 0; x < ROWS; x++)
 		{
 			for (int y = 0; y < COLUMNS; y++) {

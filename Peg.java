@@ -8,7 +8,7 @@ public class Peg
 
 	public Peg(int x, int y)
 	{
-		System.out.println("Creating peg at: " + x + ", " + y);
+		Debug.log("Creating peg at: " + x + ", " + y);
 	}
 
 	public void addBead(boolean colour, int x, int y, int z)

@@ -10,7 +10,7 @@ public class Bead
 
 	public Bead(boolean colour, int x, int y, int z)
 	{
-		System.out.println("Creating bead.");
+		Debug.log("Creating bead.");
 		if (colour == false)
 		{
 			colour = false;
