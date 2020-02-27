@@ -7,4 +7,9 @@ public class Board
 		Debug.log("Creating Board");
 		grid = new Grid();
 	}
+
+	public Grid getGrid()
+	{
+		return grid;
+	}
 }
