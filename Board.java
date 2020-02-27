@@ -1,9 +1,15 @@
 public class Board
 {
-	private Grid grid = new Grid();
+	private Grid grid;
 
 	public Board()
 	{
-		System.out.println("Creating Board");
+		Debug.log("Creating Board");
+		grid = new Grid();
+	}
+
+	public Grid getGrid()
+	{
+		return grid;
 	}
 }

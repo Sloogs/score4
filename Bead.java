@@ -10,7 +10,11 @@ public class Bead
 
 	public Bead(boolean colour, int x, int y, int z)
 	{
-		System.out.println("Creating bead.");
+		Debug.log("Creating bead at: (x: " + x + ", y: " + y +", z: " + z + ")");
+		Debug.log("Number of white beads: " + numWhite);
+		Debug.log("Number of black beads: " + numBlack);
+		Debug.log("Colour: " + colour);
+		Debug.log("Bead Id: " + beadId);
 		if (colour == false)
 		{
 			colour = false;
@@ -23,10 +27,6 @@ public class Bead
 			beadId = numBlack + 1;
 			numBlack++;
 		}
-
-		xCoord = x;
-		yCoord = y;
-		zCoord = z;
 	}
 
 	public boolean getColour()

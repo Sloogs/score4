@@ -2,18 +2,22 @@ import java.util.ArrayList;
 
 public class Peg
 {
-	private int[] coordinates = new int[2];
+	private int xCoord = 0;
+	private int yCoord = 0;
 	private int numBeads = 0;
-	private Bead[] beads = new Bead[4];
+	private ArrayList<Bead> beads = new ArrayList<Bead>();
 
 	public Peg(int x, int y)
 	{
-		System.out.println("Creating peg at: " + x + ", " + y);
+		Debug.log("Creating Peg at: (x: " + x + ", y: " + y +")");
+		xCoord = x;
+		yCoord = y;
 	}
 
-	public void addBead(boolean colour, int x, int y, int z)
+	public void addBead(boolean colour)
 	{
-		beads[numBeads] = new Bead(colour, x, y, z);
+		Bead bead = new Bead(colour, xCoord, yCoord, numBeads);
+		beads.add(bead);
 		numBeads++;
 	}
 

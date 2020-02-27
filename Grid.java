@@ -6,12 +6,17 @@ public class Grid
 
 	public Grid()
 	{
-		System.out.println("Creating grid.");
+		Debug.log("Creating Grid.");
 		for (int x = 0; x < ROWS; x++)
 		{
 			for (int y = 0; y < COLUMNS; y++) {
 				pegs[x][y] = new Peg(x, y);
 			}
 		}
+	}
+
+	public Peg getPeg(int x, int y)
+	{
+		return pegs[x][y];
 	}
 }
