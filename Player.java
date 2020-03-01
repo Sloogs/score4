@@ -1,8 +1,8 @@
 public class Player
 {
-	boolean colour;
+	Colour colour;
 
-	public Player (boolean c)
+	public Player (Colour c)
 	{
 		colour = c;
 	}

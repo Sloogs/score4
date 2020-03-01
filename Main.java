@@ -6,7 +6,7 @@ public class Main
 		Debug.enable();
 		Debug.log("Initalizing game and creating elements.");
 		Board board = new Board();
-		Player player = new Player(false);
+		Player player = new Player(Colour.WHITE);
 		player.placeBead(board, 1,1);
 	}
 }
