@@ -21,6 +21,17 @@ public class Peg
 		numBeads++;
 	}
 
+	public void removeBead()
+	{
+		bead = beads.get(numBeads - 1);
+		int x = bead.getXCoord();
+		int y = bead.getYCoord();
+		int z = bead.getZCoord();
+		Debug.log("Removing bead at: (x: " + x + ", y: " + y + ", z: " + z);
+		beads.remove(bead);
+		numBeads--;
+	}
+
 	public void removeBead(Bead bead)
 	{
 		int x = bead.getXCoord();
