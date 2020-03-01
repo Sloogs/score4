@@ -33,8 +33,17 @@ public class Peg
 
 	public Bead getBead(int n)
 	{
-		bead = bead.get(n - 1);
+		Bead bead = beads.get(n - 1);
+		int x = bead.getXCoord();
+		int y = bead.getYCoord();
+		int z = bead.getZCoord();
 		Debug.log("Getting bead at: (x: " + x + ", " + y + ")");
 		return bead;
+	}
+
+	public ArrayList<Bead> getAllBeads()
+	{
+		Debug.log("Getting all beads.");
+		return beads;
 	}
 }
