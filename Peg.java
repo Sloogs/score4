@@ -46,4 +46,12 @@ public class Peg
 		Debug.log("Getting all beads.");
 		return beads;
 	}
+
+	public int getXCoord() {
+		return xCoord;
+	}
+
+	public int getYCoord() {
+		return yCoord;
+	}
 }
