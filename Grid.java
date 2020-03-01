@@ -19,4 +19,9 @@ public class Grid
 	{
 		return pegs[x][y];
 	}
+
+	public Peg[][] getAllPegs()
+	{
+		return pegs;
+	}
 }
