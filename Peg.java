@@ -30,4 +30,11 @@ public class Peg
 		beads.remove(bead);
 		numBeads--;
 	}
+
+	public Bead getBead(int n)
+	{
+		bead = bead.get(n - 1);
+		Debug.log("Getting bead at: (x: " + x + ", " + y + ")");
+		return bead;
+	}
 }
