@@ -39,4 +39,19 @@ public class Bead
 	{
 		return this.beadId;
 	}
+
+	public int getXCoord()
+	{
+		return xCoord;
+	}
+
+	public int getYCoord()
+	{
+		return xCoord;
+	}
+
+	public int getZCoord()
+	{
+		return xCoord;
+	}
 }
