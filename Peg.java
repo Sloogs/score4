@@ -14,21 +14,42 @@ public class Peg
 		yCoord = y;
 	}
 
-	public void addBead(Colour colour)
+	public boolean addBead(Colour colour)
 	{
-		Bead bead = new Bead(colour, xCoord, yCoord, numBeads);
-		beads.add(bead);
-		numBeads++;
+		boolean successful = false;
+		if (numBeads < 4)
+		{
+			Bead bead = new Bead(colour, xCoord, yCoord, numBeads);
+			beads.add(bead);
+			numBeads++;
+			successful = true;
+		}
+		else
+		{
+			successful = false;
+		}
+
+		return successful;
 	}
 
-	public void removeBead(Bead bead)
+	public boolean removeBead(Bead bead)
 	{
-		int x = bead.getXCoord();
-		int y = bead.getYCoord();
-		int z = bead.getZCoord();
-		Debug.log("Removing bead at: (x: " + x + ", y: " + y + ", z: " + z);
-		beads.remove(bead);
-		numBeads--;
+		boolean successful = false;
+		if (numBeads > 0) { 
+			int x = bead.getXCoord();
+			int y = bead.getYCoord();
+			int z = bead.getZCoord();
+			Debug.log("Removing bead at: (x: " + x + ", y: " + y + ", z: " + z);
+			beads.remove(bead);
+			numBeads--;
+			successful = true;
+		}
+		else
+		{
+			successful = false;
+		}
+
+		return successful;
 	}
 
 	public Bead getBead(int n)
@@ -43,7 +64,7 @@ public class Peg
 
 	public ArrayList<Bead> getAllBeads()
 	{
-		Debug.log("Getting all beads.");
+		Debug.log("Getting all beads from peg: (x: " + xCoord + ", y: " + yCoord + ")");
 		return beads;
 	}
 
@@ -53,5 +74,9 @@ public class Peg
 
 	public int getYCoord() {
 		return yCoord;
+	}
+
+	public int getNumBeads() {
+		return numBeads;
 	}
 }

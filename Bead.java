@@ -32,12 +32,12 @@ public class Bead
 
 	public Colour getColour()
 	{
-		return this.colour;
+		return colour;
 	}
 
 	public int getId()
 	{
-		return this.beadId;
+		return beadId;
 	}
 
 	public int getXCoord()
@@ -47,11 +47,11 @@ public class Bead
 
 	public int getYCoord()
 	{
-		return xCoord;
+		return yCoord;
 	}
 
 	public int getZCoord()
 	{
-		return xCoord;
+		return zCoord;
 	}
 }
