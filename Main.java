@@ -5,7 +5,7 @@ public class Main
 {
 	public static void main(String[] args)
 	{
-		Debug.enable(); // This enables debugging.
+		Debug.enable(); // This enables debugging messages.
 		Debug.log("Initalizing game and creating elements.");
 		Board board = new Board();
 		Player player = new Player(Colour.WHITE);
@@ -24,8 +24,8 @@ public class Main
 		while (running) {
 			String inputString = input.nextLine();
 			if (inputString.equals("show beads")) {
-				showBeads(pegs);
-			}
+				showBeads(pegs)
+;			}
 		}
 	}
 
