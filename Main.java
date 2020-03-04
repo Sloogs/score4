@@ -24,8 +24,12 @@ public class Main
 		while (running) {
 			String inputString = input.nextLine();
 			if (inputString.equals("show beads")) {
-				showBeads(pegs)
-;			}
+				showBeads(pegs);
+			}
+			else if (inputString.equals("quit"))
+			{
+				running = false;
+			}
 		}
 	}
 
