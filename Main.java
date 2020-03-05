@@ -5,9 +5,11 @@ public class Main
 {
 	public static void main(String[] args)
 	{
-		Debug.enable(); // This enables debugging messages.
+		System.out.println("Welcome to Score 4!");
+		// Debug.enable(); // This enables debugging messages.
 		Debug.log("Initalizing game and creating elements.");
 		Board board = new Board();
+		BoardTestViewer boardTestViewer = new BoardTestViewer(board);
 		Player player = new Player(Colour.WHITE);
 		player.placeBead(board, 1,1);
 		player.placeBead(board, 1,1);
@@ -23,10 +25,14 @@ public class Main
 		boolean running = true;
 		while (running) {
 			String inputString = input.nextLine();
-			if (inputString.equals("show beads")) {
+			if (inputString.contains("show beads")) {
 				showBeads(pegs);
 			}
-			else if (inputString.equals("quit"))
+			else if (inputString.contains("show board"))
+			{
+				boardTestViewer.showBoard();
+			}
+			else if (inputString.contains("quit"))
 			{
 				running = false;
 			}
