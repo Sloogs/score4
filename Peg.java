@@ -79,4 +79,9 @@ public class Peg
 	public int getNumBeads() {
 		return numBeads;
 	}
+
+	public void emptyBeads(){
+		beads.removeAll(beads);
+		numBeads = 0;
+	}
 }

@@ -24,7 +24,7 @@ public class PegGraphic
 	/**
 	 * constructs a peg with specific coordinates
 	 * @param x
-	 * @param y 
+	 * @param y
 	 */
 	public PegGraphic(int x, int y)
 	{
@@ -46,7 +46,7 @@ public class PegGraphic
 		g2.draw(Rect1); 
 		for(int i = 0; i < n; i++) 
 		{ 
-			bead[i].draw(g2);    
+			bead[i].draw(g2);
 		}
 	}
 		

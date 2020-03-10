@@ -21,6 +21,7 @@ public class BeadGraphic {
 	private int yCoord;
 	private Color colour=Color.BLACK;
 	private Ellipse2D.Double bead;
+
 	/**
 	 * Constructor makes beads 
 	 * can be modified to put player
@@ -31,8 +32,8 @@ public class BeadGraphic {
 	public BeadGraphic(int x, int y)
 	{
 		xCoord = x;
-		yCoord = y;  
-		bead = new Ellipse2D.Double(x,y,15,15);
+		yCoord = y;
+		bead = new Ellipse2D.Double(x, y, 15, 15);
 	}
 
    /**
